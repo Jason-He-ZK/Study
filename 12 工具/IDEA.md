@@ -45,8 +45,6 @@ src文件夹   动态资源文件 web文件夹   静态资源文件   WEB-INF文
 需要内容
 数据库表 entity下创建实体类 util.JdbcUtil数据库工具类 WEB-INF下创建lib文件夹，存放mysql提供JDBC实现jar包   add as Library
 
-
-
 ### 快捷键
 
 alt + F7  查看该方法在哪里被调用
@@ -89,6 +87,6 @@ command+D 复制当前行
 14. command+alt+左键/右键 将光标返回到上次查看代码的地方
 15. command+F12 查找当前类的方法
 
-插件安装位置
+#### 插件安装位置
 
 cd  /Users/xxxx/Library/ApplicationSupport/JetBrains
