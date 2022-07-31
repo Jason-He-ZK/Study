@@ -50,5 +50,27 @@ RPC 方法的返回值和参数必须使用包装数据类型。
 
 定义 DO/DTO/VO 等 POJO 类时，不要设定任何属性默认值。
 
-吗 
 
+抽象类命名使用 Abstract 或 Base 开头；异常类命名使用 Exception 结尾；测试类 命名以它要测试的类的名称开始，以 Test 结尾。
+
+1） 获取单个对象的方法用 get 做前缀。
+
+2） 获取多个对象的方法用 list 做前缀，复数形式结尾如：listObjects。
+
+3） 获取统计值的方法用 count 做前缀。
+
+4） 插入的方法用 save/insert 做前缀。
+
+5） 删除的方法用 remove/delete 做前缀。
+
+6） 修改的方法用 update 做前缀
+
+比较是否相等
+
+用工具类
+
+Objects. *equals(* newOrgCode, plan.getOrgCode*())*
+
+所有整型包装类对象之间值的比较，全部使用 equals 方法比较。
+
+循环体内，字符串的连接方式，使用 StringBuilder 的 append 方法进行扩展

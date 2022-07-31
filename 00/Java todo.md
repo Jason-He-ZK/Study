@@ -1,10 +1,13 @@
 ### 基础
+
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/12407496/1635685692683-52fddbb9-1793-4d0a-9ec4-3bc4c84252a7.png#clientId=u830d5a82-7067-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=416&id=jIK9U&margin=%5Bobject%20Object%5D&name=image.png&originHeight=717&originWidth=940&originalType=binary&ratio=1&rotation=0&showTitle=false&size=276659&status=done&style=none&taskId=u9976717b-4353-4c70-af31-aba9982bb5b&title=&width=545)
 todo
 java项目中的classpath到底是什么
 https://www.cnblogs.com/law-luffy/p/11121528.html
 https://blog.csdn.net/sinat_30973431/article/details/82556821
+
 ### 数据类型
+
 **进制**
 
 - 10 十进制
@@ -17,7 +20,9 @@ https://blog.csdn.net/sinat_30973431/article/details/82556821
 5. byte,short,char 类型混合运算时，先各自转换成 int 类型再做运算；
 6. 多种数据类型混合运算，各自先转换成容量最大的那一种再做运算；
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/12407496/1635063520404-a3764cbc-a151-48bd-b3d2-78b251408edc.png#clientId=u7f00196a-ee57-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=437&id=qu56D&margin=%5Bobject%20Object%5D&name=image.png&originHeight=873&originWidth=1779&originalType=binary&ratio=1&rotation=0&showTitle=false&size=466973&status=done&style=none&taskId=u1a891956-d734-4041-93ee-5fa79d6d4b1&title=&width=889.5)
+
 ### 运算符
+
 ```java
 byte a = 100;
 // 以下两种方式等价，扩展运算符不改变类型
@@ -26,69 +31,85 @@ a = (byte)(a + 199):
 // 与这个不同
 a = a + 199:
 ```
+
 位运算符
 
-- <<  >>（不补零）  >>>（补零） 
+- <<  >>（不补零）  >>>（补零）
 
 其他运算符
 
 - new
 - instanceof
+
 ### 控制语句
+
 **选择语句（分支语句）**
 
 - switch（注意case穿透）（可以用枚举类）
+
 ```java
 switch(值){
 //值允许是String（JDK8）、int（byte,short,char可以自动转换int,long可以强转）
-case 值1: 
+case 值1:
   java语句;
   break;
 default:
   java语句;
 }
 ```
+
 ### 方法
+
 #### 重载与覆盖
+
 **重载（overload）**
 和返回值类型无关，和修饰符列表无关
 和形参有关
 **重写（覆盖、override）**
-1. 有继承关系的两个类   
+
+1. 有继承关系的两个类
 2. 具有相同方法名、返回值类型（或子类）、形式参数列表
-1. 访问权限不能更低（public为最高）   
-2. 抛出异常不能更多（更宽泛） 
-注意   
-构造方法：无法继承，所以无法覆盖   
-静态方法：覆盖没有意义（方法覆盖通常和多态联合起来）
-私有方法：无法覆盖
+3. 访问权限不能更低（public为最高）
+4. 抛出异常不能更多（更宽泛）
+   注意
+   构造方法：无法继承，所以无法覆盖
+   静态方法：覆盖没有意义（方法覆盖通常和多态联合起来）
+   私有方法：无法覆盖
+
 #### 可变长参数
-替代参数个数：0~N个 
-参数列表中必须在最后一个位置上 
-只能有1个可变长度参数 
-可以当做一个数组来看待 
+
+替代参数个数：0~N个
+参数列表中必须在最后一个位置上
+只能有1个可变长度参数
+可以当做一个数组来看待
+
 ```java
 public static void m2(int a, String... args){
 } 
 ```
+
 ### 包
-公司域名倒序 + 项目名 + 模块名 + 功能名 
+
+公司域名倒序 + 项目名 + 模块名 + 功能名
 package（package语句只允许出现在java源代码的第一行）
 import（import语句只能出现在package语句之下，class声明语句之上）
 import java.util.*;  该包中的所有类
 java.lang.* 中的类，或者同包中的类，不需要import
+
 ### 访问权限控制
-属性，方法：4个都能用 
+
+属性，方法：4个都能用
 类，接口：public和默认能用，其它不行
 
 | 访问控制修饰符 | 本类 | 同包 | 子类 | 任意位置 |
-| --- | --- | --- | --- | --- |
-| public | √ | √ | √ | √ |
-| protected | √ | √ | √ | × |
-| 默认 | √ | √ | × | × |
-| private | √ | × | × | × |
+| -------------- | ---- | ---- | ---- | -------- |
+| public         | √   | √   | √   | √       |
+| protected      | √   | √   | √   | ×       |
+| 默认           | √   | √   | ×   | ×       |
+| private        | √   | ×   | ×   | ×       |
 
 ### 枚举
+
 ```java
 方法名称	 描述
 values()	以数组形式返回枚举类型的所有成员
@@ -96,6 +117,7 @@ valueOf()	将普通字符串转换为枚举实例
 compareTo()	比较两个枚举成员在定义时的顺序
 ordinal()	获取枚举成员的索引位置
 ```
+
 ```java
 public enum Color {
     /**
@@ -103,7 +125,7 @@ public enum Color {
      */
     RED("red", 1),
     ;
-    
+  
     private String name;
     private int value;
 
@@ -121,7 +143,9 @@ public enum Color {
     public void setValue(int value) { this.value = value; }
 }
 ```
+
 ### 随机
+
 ```java
 // 方法一：种子数
 Random random = new Random();
@@ -135,11 +159,14 @@ double r2 = Math.random();
 // 方法三
 long r3 = currentTimeMillis();
 ```
+
 ```java
 RandomStringUtils.randomAlphanumeric(3);
 
 ```
+
 ### 时间
+
 ```java
 // 生成
 LocalDateTime now = LocalDateTime.now();
@@ -156,15 +183,20 @@ String dateStr = now.format(dateTimeFormatter2);
 // 反解析
 LocalDateTime parse = LocalDateTime.parse("2002/01/02 11:21", dateTimeFormatter2);
 ```
+
 ### 字符串
+
 格式化
+
 ```java
 // 0代表前面补充0，4代表长度为4，d代表参数为正数型
 String str = String.format("%04d", youNumber);
 ```
 
 ### IO
+
 Java7自动关闭流
+
 ```java
 try (
     FileReader fileReader = new FileReader("/a.txt");
@@ -176,19 +208,24 @@ try (
 ```
 
 ### 异常
+
 catch多个异常
+
 ```java
 try {
-    
+  
 } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
     e.printStackTrace();
 }
 ```
 
 ### 序列化
+
 transient int age; 忽略序列化
-private static final long serialVersionUID = -111111111111111111L;	
+private static final long serialVersionUID = -111111111111111111L;
+
 ### 反射
+
 ```java
 final Class<?> aClass = Class.forName("learn.Person");
 final Class<Person> aClass1 = Person.class;
@@ -196,9 +233,21 @@ final Class<? extends Person> aClass2 = new Person().getClass();
 ```
 
 ### 注解
-#### 
+
+注解
+
+@NotNull *(* groups= *{* AddGroup.class, UpdateGroup.class*})*
+
+@NotNull:不能为null，但可以为empty,没有Size的约束
+
+@NotEmpty 用在集合类上面 加了@NotEmpty的String类、Collection、Map、数组，是不能为null或者长度为0的(String Collection Map的isEmpty()方法)
+
+@NotBlank只用于String,不能为null且trim()之后size>0
+
+
 
 ### 线程
+
 ```java
 // 方法一：继承Thread接口
 class My01 extends Thread {
@@ -230,12 +279,18 @@ class My03 implements Callable<Integer> {
 }
 FutureTask<Integer> futureTask = new FutureTask<>(new My03());
 ```
+
 设置为守护线程（必须在 thread.start()之前设置）
 thread01.setDaemon(true)
+
 ### 泛型
+
 ### 接口 抽象类
+
 ### 集合
+
 #### 比较（Comparable，Comparator）
+
 ```java
 // 方法一：实现Comparable接口（Comparable是默认的比较接口，需要和比较的对象紧密结合到一起）
 public int compareTo(Object o) {
@@ -256,13 +311,14 @@ Set set = new TreeSet(MyComparator);
 
 ---
 
-
-
-
 ## Json
+
 ### FastJson
+
 #### 序列化和反序列化
+
 [https://www.cnblogs.com/jajian/p/10051901.html](https://www.cnblogs.com/jajian/p/10051901.html)
+
 ```java
 <dependency>
      <groupId>com.alibaba</groupId>
@@ -270,6 +326,7 @@ Set set = new TreeSet(MyComparator);
      <version>x.x.x</version>
 </dependency>
 ```
+
 ```java
 String jsonString = JSON.toJSONString(obj);
 
@@ -280,17 +337,22 @@ List<VO> list = JSON.parseObject("...", new TypeReference<List<VO>>() {});
 
 
 ```
+
 输出对象obj的null值，SerializerFeature的几个枚举值，可多选
 WriteNullListAsEmpty		将Collection类型字段的字段空值输出为[]
 WriteNullStringAsEmpty		将字符串类型字段的空值输出为空字符串 ""
 WriteNullNumberAsZero	将数值类型字段的空值输出为0
 WriteNullBooleanAsFalse	将Boolean类型字段的空值输出为false
 日期
+
 ```java
 JSON.toJSONStringWithDateFormat(date, "yyyy-MM-dd HH:mm:ss.SSS")
 ```
+
 #### 定制序列化
+
 ##### @JSONField（可加在属性，方法上）
+
 ```java
 package com.alibaba.fastjson.annotation;
 
@@ -307,7 +369,9 @@ public @interface JSONField {
     boolean deserialize() default true;
 }
 ```
+
 指定序列化格式
+
 ```java
 public static class Model {
     @JSONField(serializeUsing = ModelValueSerializer.class)
@@ -324,39 +388,47 @@ public static class ModelValueSerializer implements ObjectSerializer {
     }
 }
 ```
+
 ```java
 Model model = new Model();
 model.value = 100;
 String json = JSON.toJSONString(model);
 Assert.assertEquals("{\"value\":\"100元\"}", json);
 ```
-##### @JSONType（配置在类上）
-##### SerializeFilter
-##### ParseProcess（反序列化）
 
+##### @JSONType（配置在类上）
+
+##### SerializeFilter
+
+##### ParseProcess（反序列化）
 
 #### 在 Spring MVC 中集成 Fastjson
 
-
 ## 并发/多线程
+
 并发编程基础
+
 ### 线程池
+
 #### 构造参数
+
 ```java
 public ThreadPoolExecutor(int corePoolSize,int maximumPoolSize,long keepAliveTime,TimeUnit unit,
 	BlockingQueue<Runnable> workQueue,ThreadFactory threadFactory,RejectedExecutionHandler handler);
 ```
+
 | corePoolSize
  | 必需 | 核心线程数 | 线程池中一直保持存活的线程数，即使这些线程处于空闲。
-但是将allowCoreThreadTimeOut参数设置为true后，核心线程处于空闲一段时间以上，也会被回收 |
-| --- | --- | --- | --- |
-| maximumPoolSize | 必需 | 池中允许的最大线程数 | 当核心线程全部繁忙且任务队列打满之后，线程池会临时追加线程，直到总线程数达到maximumPoolSize这个上限 |
-| keepAliveTime | 必需 | 线程空闲超时时间 | 当非核心线程处于空闲状态的时间超过这个时间后，该线程将被回收。 |
-| unit | 必需 | keepAliveTime参数的时间单位 | TimeUnit.DAYS（天）、TimeUnit.HOURS（小时）、TimeUnit.MINUTES（分钟）、TimeUnit.SECONDS（秒）、TimeUnit.MILLISECONDS（毫秒）、TimeUnit.MICROSECONDS（微秒）、TimeUnit.NANOSECONDS（纳秒） |
-| workQueue | 必须 | 任务队列 | 采用阻塞队列实现。
-当核心线程全部繁忙时，后续由execute方法提交的Runnable将存放在任务队列中，等待被线程处理 |
-| threadFactory | 非必须 | 线程工厂 | 指定线程池创建线程的方式 |
-| handler | 非必须 | 拒绝策略 | 当线程池中线程数达到maximumPoolSize且workQueue打满时，后续提交的任务将被拒绝，handler可以指定用什么方式拒绝任务 |
+
+| 但是将allowCoreThreadTimeOut参数设置为true后，核心线程处于空闲一段时间以上，也会被回收  |        |                             |                                                                                                                                                                                           |
+| --------------------------------------------------------------------------------------- | ------ | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| maximumPoolSize                                                                         | 必需   | 池中允许的最大线程数        | 当核心线程全部繁忙且任务队列打满之后，线程池会临时追加线程，直到总线程数达到maximumPoolSize这个上限                                                                                       |
+| keepAliveTime                                                                           | 必需   | 线程空闲超时时间            | 当非核心线程处于空闲状态的时间超过这个时间后，该线程将被回收。                                                                                                                            |
+| unit                                                                                    | 必需   | keepAliveTime参数的时间单位 | TimeUnit.DAYS（天）、TimeUnit.HOURS（小时）、TimeUnit.MINUTES（分钟）、TimeUnit.SECONDS（秒）、TimeUnit.MILLISECONDS（毫秒）、TimeUnit.MICROSECONDS（微秒）、TimeUnit.NANOSECONDS（纳秒） |
+| workQueue                                                                               | 必须   | 任务队列                    | 采用阻塞队列实现。                                                                                                                                                                        |
+| 当核心线程全部繁忙时，后续由execute方法提交的Runnable将存放在任务队列中，等待被线程处理 |        |                             |                                                                                                                                                                                           |
+| threadFactory                                                                           | 非必须 | 线程工厂                    | 指定线程池创建线程的方式                                                                                                                                                                  |
+| handler                                                                                 | 非必须 | 拒绝策略                    | 当线程池中线程数达到maximumPoolSize且workQueue打满时，后续提交的任务将被拒绝，handler可以指定用什么方式拒绝任务                                                                           |
 
 任务队列
 
@@ -367,6 +439,7 @@ public ThreadPoolExecutor(int corePoolSize,int maximumPoolSize,long keepAliveTim
 线程工厂
 
 - 默认提供的线程工厂
+
 ```java
 DefaultThreadFactory() {
     SecurityManager s = System.getSecurityManager();
@@ -377,24 +450,30 @@ DefaultThreadFactory() {
         "-thread-";
 }
 ```
+
 拒绝策略
 
 - AbortPolicy（默认）：丢弃任务并抛出RejectedExecutionException异常。
 - CallerRunsPolicy：直接运行这个任务的run方法，但并非是由线程池的线程处理，而是交由任务的调用线程处理。
 - DiscardPolicy：直接丢弃任务，不抛出任何异常。
 - DiscardOldestPolicy：将当前处于等待队列列头的等待任务强行取出，然后再试图将当前被拒绝的任务提交到线程池执行。
+
 #### 状态
 
 - RUNNING：当创建线程池后，初始时，线程池处于RUNNING状态；
 - SHUTDOWN：如果调用了shutdown()方法，则线程池处于SHUTDOWN状态
-（此时线程池不能够接受新的任务，它会等待所有任务执行完毕）
+  （此时线程池不能够接受新的任务，它会等待所有任务执行完毕）
 - STOP：如果调用了shutdownNow()方法，则线程池处于STOP状态
-（此时线程池不能接受新的任务，并且会去尝试终止正在执行的任务）
+  （此时线程池不能接受新的任务，并且会去尝试终止正在执行的任务）
 - TERMINATED：当线程池处于SHUTDOWN或STOP状态，并且所有工作线程已经销毁，任务缓存队列已经清空或执行结束后，线程池被设置为TERMINATED状态。
+
 #### 执行方法
+
 execute()
 submit()：还是调用的execute()方法，能够返回任务执行的结果
+
 #### 使用
+
 ```java
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -429,15 +508,13 @@ public class MyTest {
 }
 
 ```
+
 #### 四种预先定义好的线程池
 
 - CachedThreadPool:可缓存的线程池
 - SecudleThreadPool:周期性执行任务的线程池
 - SingleThreadPool:只有一条线程来执行任务
 - FixedThreadPool:定长的线程池
-
-
-
 
 锁
 并发容器
@@ -462,6 +539,7 @@ juc并发工具类
 	CAS
 
 ## JVM
+
 类加载机制
 字节码执行机制
 jvm内存模型

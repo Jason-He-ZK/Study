@@ -1,5 +1,7 @@
 ### CentOS7
+
 **换源**
+
 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
 wget -O /etc/yum.repos.d/CentOS-Base.repo https://mirrors.aliyun.com/repo/Centos-7.repo
 yum clean all 
@@ -25,7 +27,7 @@ grep 'temporary password' /var/log/mysqld.log
 mysql -u root -p
 查看密码策略
 SHOW VARIABLES LIKE 'validate_password%';
-修改密码策略
+修改密码策略v
 set global validate_password.policy=0;
 set global validate_password.special_char_count=0;
 修改密码
