@@ -57,6 +57,7 @@ Alt + C    Check/Uncheck task list item
         "editor.unicodeHighlight.ambiguousCharacters": false,
         "editor.unicodeHighlight.invisibleCharacters": false,
         "editor.wordWrap": "on",
+        // 代码提示
         "editor.quickSuggestions": {
           "comments": "on",
           "strings": "on",

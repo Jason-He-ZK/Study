@@ -15,6 +15,8 @@ restful
 序列化？？？？
 
 SpringBoot 项目热部署
+
+
 # 核心内容
 ## 新建项目
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/12407496/1637483563082-61c25329-7f1d-4d30-961f-03812f6d913d.png#clientId=ua8a70808-566d-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=629&id=u84ce542b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1258&originWidth=1604&originalType=binary&ratio=1&rotation=0&showTitle=false&size=202447&status=done&style=none&taskId=u40374ef4-9215-4ece-a1d1-fadca67d0d1&title=&width=802)
