@@ -78,3 +78,16 @@ Alt + C    Check/Uncheck task list item
 
 $1 为光标初始位置，按tab后跳到 $2 的位置，以此类推
 ![](image/2022-07-31-23-46-16.png)
+
+
+### 新建key
+
+#### win
+```
+git config --global user.name "hzk"
+git config --global user.email "jsnhe0923@outlook.com"
+
+ssh-keygen -t rsa -C "jsnhe0923@outlook.com"
+```
+
+id_rsa.pub文件中内容添加到git网站的设置中

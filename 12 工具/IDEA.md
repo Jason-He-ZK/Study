@@ -49,29 +49,39 @@ src文件夹   动态资源文件 web文件夹   静态资源文件   WEB-INF文
 
 alt + F7  查看该方法在哪里被调用
 
+
+### 激活
+
+https://www.yuque.com/docs/share/29d5dc6a-d47b-4841-a496-5068389cfe1f
+
 ### 插件
 
-8 RestfulToolkit: 快速定位controller层接口、接口测试
-10 Mybatis Log Plugin: 快速打印SQL语句
-11 Free Mybatis Plugin: mybatis xml id与接口间跳转
-4 Easy Code: 数据库表生成JavaBean
-5 JRebel for IntelliJ: JavaWeb项目热部署
-7 .ignore: 生成git ignore文件
+Translation  翻译
+Key Promoter X  快捷键提示
+Rainbow Brackets  彩虹色括号
+CodeGlance  右侧代码地图
+codota、tabnine  代码补全
+Grep Console  日志着色控制台显示
+Sequence Giagram  生成代码时序图
+RestfulTool  接口工具
+alibaba  规范
+MyBatis X  SQL辅助
+RestfulTool Restful服务开发工具集
+Easy Code: 数据库表生成JavaBean
+JRebel for IntelliJ: JavaWeb项目热部署（收费）
+Mybatis Log  快速打印SQL语句
 
-天品
-		1、String Manipulation 字符串处理插件
-		3、JUnitGenerator V2.0  代码生成
-		5、RestfulTool Restful服务开发工具集
 
-2 CodeGlance: 右侧代码地图
-3 Translation
-4 Rainbow Brackets: 彩虹色括号
-5 Grep Console: 日志着色控制台显示
-6 Statistic: 代码统计
-3、GsonFormatPlus json代码生成
-6 Key Promoter X: 快捷键提示
-4、Sequence Giagram 生成代码时序图
-7、MyBatis X
+String Manipulation 字符串处理插件
+GsonFormatPlus Json类生成
+JUnitGenerator 单元测试类生成
+.ignore: 生成git ignore文件
+
+
+
+
+
+
 
 快捷键
 [https://www.jianshu.com/p/5de7cca0fefc](https://www.jianshu.com/p/5de7cca0fefc)
