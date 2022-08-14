@@ -89,6 +89,7 @@ All done!
 ```
 ### 修改密码
 ALTER USER 'root'@'localhost' IDENTIFIED BY '12345678'
+
 ## Redis
 brew install redis
 brew services start redis
