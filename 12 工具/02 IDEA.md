@@ -33,20 +33,21 @@ Alibaba_Java_Coding_Guidelines-2.1.1   代码规范
 CodeGlance_Pro-1.4.8   右侧代码地图
 
 EasyCode-1.2.6-java.RELEASE   数据库表生成JavaBean
+gittoolbox-212.9.7   git管理
 GrepConsole-12.14.211.6693.0   日志控制台着色显示
 GsonFormatPlus   Json类生成
 ignore-4.4.2   生成git的ignore文件
 intellij-rainbow-brackets-6.25   彩虹括号
+Json2Pojo   JSON转换
 JumpToLine   调试跳转
 Key-Promoter-X-2022.2   快捷键提示
-MavenRunHelper   
+MavenRunHelper   maven辅助
 mybatis-log-plugin-free-1.3.0   快速打印SQL语句日志
 MybatisX-1.5.4   Mybatis辅助
 RestfulTool-1.4.5   接口开发工具
 SequenceDiagram-2.2.0   生成代码时序图
 StringManipulation   字符串处理插件
 TabNine-0.7.20   智能代码补全
-toolkit-intellij-2022.7.2-222   
 TranslationPlugin-3.3.4   翻译
 zh.222.168   中文
 
