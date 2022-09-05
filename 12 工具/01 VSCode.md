@@ -96,3 +96,8 @@ ssh-keygen -t rsa -C "jsnhe0923@outlook.com"
 ```
 
 id_rsa.pub文件中内容添加到git网站的设置中
+
+
+### 终端字体间距
+https://blog.csdn.net/shallow72/article/details/121557619
+
